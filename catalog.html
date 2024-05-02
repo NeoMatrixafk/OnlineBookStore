@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- header section starts  -->
+<header class="header">
+    <div class="header-1">
+        <a href="index.html" class="logo"> <i class="fas fa-book"></i> The Book Store </a>
+        <div class="search-form">
+            <input type="text" placeholder="Search books..." id="search-input">
+            <label for="search-input" class="fas fa-search"></label>
+        </div>
+        <div class="icons">
+            <div id="fav-btn" class="fas fa-heart"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        </div>
+    </div>
+    <div class="header-2">
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html#featured">featured</a>
+            <a href="index.html#arrivals">arrivals</a>
+            <a href="catalog.html">Catalog</a>
+        </nav>
+    </div>
+</header>
+<!-- header section ends -->
+
+<!-- Cart Form Container with Cart Content -->
+<div class="cart-form-container">
+    <div id="close-cart-btn" class="fas fa-times"></div>
+
+    <!-- Main Cart Container -->
+    <div id="cart-container">
+        <form action="">
+            <h3>Your Cart</h3>
+            <!-- This will hold cart items -->
+            <div class="cart-content"></div>
+        </form>
+    </div>
+</div>
+
+<!-- cart form  -->
+
+<div class="fav-form-container">
+
+    <div id="close-fav-btn" class="fas fa-times"></div>
+
+    <!-- Favs Container -->
+    <div id="fav-container">
+        <form action="">
+            <h3>Your Favorites</h3>
+            <!-- This will hold fav items -->
+            <div class="fav-content"></div>
+        </form>
+    </div>
+
+</div>
+
+<!-- Updated modal structure -->
+<div id="book-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="book-details">
+            <!-- Content will be dynamically added here -->
+        </div>
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn add-to-fav">Add to Favorites</button>
+    </div>
+</div>
+
+<!-- Book Catalog Section without Swiper -->
+<section class="catalog" id="catalog">
+    <h1 class="heading"> <span>Book Catalog</span> </h1>
+
+    <!-- Static grid layout for all books -->
+    <div class="book-grid">
+
+        <!-- Book 1 -->
+        <div class="box" data-book-id="1" data-book-title="Oliver Twist" data-book-price="₹399.99">
+            <div class="image">
+                <img src="images/olivertwist1.jpg" alt="Oliver Twist">
+            </div>
+            <div class="content">
+                <h3>Oliver Twist</h3>
+                <div class="price">₹399.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="box" data-book-id="2" data-book-title="Darwin" data-book-price="₹499.99">
+            <div class="image">
+                <img src="images/darwin5.jpg" alt="Darwin">
+            </div>
+            <div class="content">
+                <h3>Darwin</h3>
+                <div class="price">₹499.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="box" data-book-id="3" data-book-title="Siberia" data-book-price="₹599.99">
+            <div class="image">
+                <img src="images/siberia9.webp" alt="Siberia">
+            </div>
+            <div class="content">
+                <h3>Siberia</h3>
+                <div class="price">₹599.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Repeat for other books -->
+        <div class="box" data-book-id="4" data-book-title="Trailed" data-book-price="₹499.99">
+            <div class="image">
+                <img src="images/trailed10.jpg" alt="Trailed">
+            </div>
+            <div class="content">
+                <h3>Trailed</h3>
+                <div class="price">₹499.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box" data-book-id="5" data-book-title="Frank" data-book-price="₹549.99">
+            <div class="image">
+                <img src="images/frank3.jpg" alt="Frank">
+            </div>
+            <div class="content">
+                <h3>Frank</h3>
+                <div class="price">₹549.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box" data-book-id="6" data-book-title="Gulliver" data-book-price="₹599.99">
+            <div class="image">
+                <img src="images/gulliver4.jpg" alt="Gulliver">
+            </div>
+            <div class="content">
+                <h3>Gulliver</h3>
+                <div class="price">₹599.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Corrected numbering for additional books -->
+        <div class="box" data-book-id="7" data-book-title="What Cannot Be Said" data-book-price="₹549.99">
+            <div class="image">
+                <img src="images/newbook1.jpg" alt="What Cannot Be Said">
+            </div>
+            <div class="content">
+                <h3>What Cannot Be Said</h3>
+                <div class="price">₹549.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box" data-book-id="8" data-book-title="Close to Death" data-book-price="₹559.99">
+            <div class="image">
+                <img src="images/newbook2.jpg" alt="Close to Death">
+            </div>
+            <div class="content">
+                <h3>Close to Death</h3>
+                <div class="price">₹559.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box" data-book-id="9" data-book-title="An Orphan's War" data-book-price="₹489.99">
+            <div class="image">
+                <img src="images/newbook3.jpg" alt="An Orphan's War">
+            </div>
+            <div class="content">
+                <h3>An Orphan's War</h3>
+                <div class="price">₹489.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box" data-book-id="10" data-book-title="The Wide Wide Sea" data-book-price="₹524.99">
+            <div class="image">
+                <img src="images/newbook4.jpg" alt="The Wide Wide Sea">
+            </div>
+            <div class="content">
+                <h3>The Wide Wide Sea</h3>
+                <div class="price">₹524.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="box" data-book-id="11" data-book-title="You Like It Darker" data-book-price="₹599.99">
+            <div class="image">
+                <img src="images/newbook5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>You like it darker</h3>
+                <div class="price">₹599.99</div>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="index.html#featured"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="index.html#arrivals"> <i class="fas fa-arrow-right"></i> arrivals </a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> privacy policy </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> our serivces </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a> <i class="fas fa-phone"></i> +91 8369717398 </a>
+            <a> <i class="fas fa-phone"></i> +91 8879393900 </a>
+            <a><i class="fas fa-envelope"></i> <span class="email">thebookstore@gmail.com</span> </a>
+        </div>
+        
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="credits">
+        <p>| Created by: Austin Kurian and Divya Panchal |</p>
+        
+    </div>
+
+
+</section>
+
+<!-- footer section ends -->
+
+<script src="script.js"></script>
+</body>
+</html>
