@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Book Store</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
@@ -55,14 +60,14 @@
             <!-- This will hold cart items -->
             <div class="cart-content"></div>
             <!-- Total Price and Book Count -->
-            <div class="cart-summary">
+            <div class="cart-summary flex-container">
                 <p>Total Books: <span id="total-books">0</span></p>
                 <p>Total Price: ₹<span id="total-price">0</span></p>
             </div>
+            <button id="checkout-btn" type="button">Checkout</button>
         </form>
     </div>
 </div>
-
 
 <!-- cart form  -->
 
@@ -76,6 +81,9 @@
             <h3>Your Favorites</h3>
             <!-- This will hold fav items -->
             <div class="fav-content"></div>
+            <div class="fav-summary flex-container">
+                <p>Total Books: <span id="total-books">0</span></p>
+            </div>
         </form>
     </div>
 
@@ -590,8 +598,8 @@
 
         <div class="box">
             <h3>extra links</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> privacy policy </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> our serivces </a>
+            <a> <i class="fas fa-arrow-right"></i> privacy policy </a>
+            <a> <i class="fas fa-arrow-right"></i> our serivces </a>
         </div>
 
         <div class="box">

@@ -388,6 +388,20 @@ section{
     cursor: pointer;
 }
 
+.cart-summary {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Align items vertically */
+    padding: 10px; /* Padding around the summary */
+  }
+  
+  .cart-summary p {
+    margin: 0; /* Remove default margin from paragraphs */
+    padding: 0; /* No padding for paragraphs */
+    font-size: 16px; /* Font size for better readability */
+  }
+  
+
 .fav-form-container{
     display: flex;
     align-items: center;
@@ -399,6 +413,19 @@ section{
     height:100%;
     width:100%;
 }
+
+.fav-summary {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Align items vertically */
+    padding: 10px; /* Padding around the summary */
+  }
+  
+  .fav-summary p {
+    margin: 0; /* Remove default margin from paragraphs */
+    padding: 0; /* No padding for paragraphs */
+    font-size: 16px; /* Font size for better readability */
+  }
 
 /* CSS for styling the cart items */
 .cart-content {
@@ -446,6 +473,20 @@ section{
 .remove-from-cart:hover {
     background-color: darkred;
 }
+
+#checkout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#checkout-btn:hover {
+    background-color: darkred;
+}
+
 
 
 .fav-form-container.active{

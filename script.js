@@ -38,6 +38,8 @@ function attachRemoveButtonListenerFav(favItem) {
   favItem.querySelector('.remove-from-fav').addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default behavior
     favItem.remove(); // Remove the item
+    updateFavSummary();
+    checkIfFavIsEmpty();
   });
 }
 
@@ -57,11 +59,26 @@ function updateCartSummary() {
   document.getElementById('total-price').textContent = totalPrice.toFixed(2);
 }
 
+// Function to update favorites summary (total book count)
+function updateFavSummary() {
+  const favItems = favContainer.querySelectorAll('.fav-item');
+  const totalBooks = favItems.length; // Total books in favorites
+  document.querySelector('.fav-summary span').textContent = totalBooks;
+}
+
 // Function to check if the cart is empty
 function checkIfCartIsEmpty() {
   const cartItems = cartContainer.querySelectorAll('.cart-item');
   if (cartItems.length === 0) {
     cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+  }
+}
+
+// Function to check if the cart is empty
+function checkIfFavIsEmpty() {
+  const favItems = favContainer.querySelectorAll('.fav-item');
+  if (favItems.length === 0) {
+    favContainer.innerHTML = '<p>Your favorites are empty.</p>';
   }
 }
 
@@ -116,6 +133,8 @@ function addBookToFav(bookId, bookTitle, bookPrice, bookImage) {
     
     favContainer.appendChild(favItem);
     attachRemoveButtonListenerFav(favItem);
+    updateFavSummary();
+    checkIfFavIsEmpty();
   }
 }
 
@@ -177,7 +196,8 @@ document.querySelectorAll('.fas.fa-heart').forEach((heartButton) => {
     const bookPrice = bookBox.getAttribute('data-book-price');
     const bookImage = bookBox.querySelector('.image img').src;
 
-    addBookToFav(bookId, bookTitle, bookPrice, bookImage); // Add to favorites
+    addBookToFav(bookId, bookTitle, bookPrice, bookImage);
+    updateFavSummary();
   });
 });
 
@@ -208,6 +228,18 @@ const arrivalsSection = document.querySelector('#arrivals');
     });
   });
 });
+
+document.querySelector('#checkout-btn').addEventListener('click', () => {
+  const totalBooks = document.getElementById('total-books').textContent;
+  const totalPrice = document.getElementById('total-price').textContent;
+
+  // Construct the URL with query parameters
+  const checkoutUrl = `payment.html?totalBooks=${totalBooks}&totalPrice=${totalPrice}`;
+
+  // Redirect to the payment page with the parameters
+  window.location.href = checkoutUrl;
+});
+
 
 //header stays even if scrolled
 window.onscroll = () => {
