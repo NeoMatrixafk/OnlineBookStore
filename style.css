@@ -958,45 +958,6 @@ section{
     font-size: 20px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
-
-/* Ensure book boxes are displayed in a grid layout */
-.catalog .book-grid {
-    display: flex; /* or use grid layout */
-    flex-wrap: wrap; /* allow multiple rows */
-    gap: 16px; /* space between boxes */
-}
-
-/* Book boxes with basic styling */
-.catalog .box {
-    background: white; /* background color */
-    padding: 16px; /* padding inside box */
-    border: 1px solid #ddd; /* border for separation */
-    border-radius: 8px; /* rounded corners */
-    flex: 1 1 calc(33.333% - 32px); /* three boxes per row */
-    max-width: 30%; /* optional max-width */
-    text-align: center; /* center text content */
-    box-sizing: border-box; /* Include padding in width calculations */
-}
-
-/* Ensure all images are displayed at the same size */
-.catalog .box .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.catalog .box .image img {
-    max-width: 100%; /* Images fill the parent container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Consistent rounding */
-}
-
-/* Optional: Ensure consistent content height */
-.catalog .box .content {
-    min-height: 100px; /* Or another consistent height */
-}
-
-
 /* media queries  */
 
 @media (max-width:991px){

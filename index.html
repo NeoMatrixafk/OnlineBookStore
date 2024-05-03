@@ -37,7 +37,6 @@
             <a href="#">home</a>
             <a href="#featured">featured</a>
             <a href="#arrivals">arrivals</a>
-            <a href="catalog.html">Catalog</a>
         </nav>
     </div>
 
@@ -55,9 +54,15 @@
             <h3>Your Cart</h3>
             <!-- This will hold cart items -->
             <div class="cart-content"></div>
+            <!-- Total Price and Book Count -->
+            <div class="cart-summary">
+                <p>Total Books: <span id="total-books">0</span></p>
+                <p>Total Price: ₹<span id="total-price">0</span></p>
+            </div>
         </form>
     </div>
 </div>
+
 
 <!-- cart form  -->
 
@@ -97,7 +102,7 @@
         <div class="content">
             <h3>upto 60% off</h3>
             <p> For first time buyers </p>
-            <a href="catalog.html" class="btn">shop now</a>
+            <a href="#featured" class="btn">shop now</a>
         </div>
 
         <div class="swiper books-slider">
@@ -183,7 +188,7 @@
             <div class="swiper-slide box" data-book-id="1" data-book-title="To Kill a Mockingbird" data-book-price="₹449.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/mockingbird2.jpg" alt="">
@@ -198,7 +203,7 @@
             <div class="swiper-slide box" data-book-id="2" data-book-title="Alice's Adventures in Wonderland" data-book-price="₹449.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/alice6.jpg" alt="">
@@ -213,7 +218,7 @@
             <div class="swiper-slide box" data-book-id="3" data-book-title="All the Light We Cannot See" data-book-price="₹459.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/light7.jpg" alt="">
@@ -228,7 +233,7 @@
             <div class="swiper-slide box" data-book-id="4" data-book-title="Northern Lights" data-book-price="₹399.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/nlights8.jpg" alt="">
@@ -243,7 +248,7 @@
             <div class="swiper-slide box" data-book-id="5" data-book-title="The Lost Pianos of Siberia" data-book-price="₹439.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/siberia9.webp" alt="">
@@ -258,7 +263,7 @@
             <div class="swiper-slide box" data-book-id="6" data-book-title="Oliver Twist" data-book-price="₹619.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/olivertwist1.jpg" alt="">
@@ -273,7 +278,7 @@
             <div class="swiper-slide box" data-book-id="7" data-book-title="Gulliver's Travels" data-book-price="₹529.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/gulliver4.jpg" alt="">
@@ -288,7 +293,7 @@
             <div class="swiper-slide box" data-book-id="8" data-book-title="Trailed" data-book-price="₹449.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/trailed10.jpg" alt="">
@@ -303,7 +308,7 @@
             <div class="swiper-slide box" data-book-id="9" data-book-title="On the Origin of Species" data-book-price="₹619.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/darwin5.jpg" alt="">
@@ -318,7 +323,7 @@
             <div class="swiper-slide box" data-book-id="10" data-book-title="The Hobbit" data-book-price="₹519.99">
                 <div class="icons">
                     <a class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="images/hobbit.jpeg" alt="">
@@ -551,7 +556,7 @@
         <h3>deal of the day</h3>
         <h1>upto 30% off</h1>
         <p>Good news for you, if you buy any book on weekends and free delivery!</p>
-        <a href="catalog.html" class="btn">shop now</a>
+        <a href="#arrivals" class="btn">shop now</a>
     </div>
 
     <div class="image">
@@ -615,7 +620,6 @@
 </section>
 
 <!-- footer section ends -->
-
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
